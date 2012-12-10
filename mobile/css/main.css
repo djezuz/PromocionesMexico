@@ -1,15 +1,3 @@
-@font-face {
-    font-family: 'Myriad';
-    src: url('myriadpro-boldit.eot');
-    src: url('pincoyablack-webfont.eot?#iefix') format('embedded-opentype'),
-         url('myriadpro-boldit.otf') format('otf'),
-         url('myriadpro-boldit.ttf') format('truetype'),
-         url('myriadpro-boldit.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 
 /* F bar theme - just for the docs overview headers */
 .ui-bar-f {
@@ -98,27 +86,30 @@
 
 
 
-h1#logo img{
+figure.ajuste img
+{
 	width: 100%;
 }
 
-.blanco{
+body
+{
+	font-family: 'Helvetica';
 	background:white;
 }
 
-.center{
-	text-align: center;
+section.descripcion p
+{
+	text-align: justify;
 }
-
 
 footer figure.iconos
 {
-	margin-left: 14%;
+	margin-left: 8%;
 	padding: 0 0 0 25%;
 }
 
 footer figure.iconos img
 {
-	width: 10%;
+	width: 20%;
 	padding: 3% 0 2% 0;
 }

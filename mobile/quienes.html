@@ -23,7 +23,7 @@
   ================================================== -->
 	
   	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-  	<link rel="stylesheet" href="../css/main.css">
+  	<link rel="stylesheet" href="css/main.css">
 	
 
 	<!--[if lt IE 9]>
@@ -52,24 +52,36 @@
 	<link rel="shortcut icon" href=".ico" type="image/x-icon" />
 
 </head>
-<body class="blanco">
+<body>
 
-	<div data-role="header" class="ui-title ui-bar-b"> 
-		<h1></h1> 
+	<header data-role="header" class="ui-title ui-bar-b"> 
+		<h1>¿Quiénes Somos?</h1> 
 		<a href="index.html" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-notext ui-btn-up-b" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="b" title="Home"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Home</span><span class="ui-icon ui-icon-home ui-icon-shadow">&nbsp;</span></span></a>
 
 		<a href="../nav.html" data-icon="search" data-iconpos="notext" data-rel="dialog" data-transition="fade" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-notext ui-btn-up-b" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="b" title="Search"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Search</span><span class="ui-icon ui-icon-search ui-icon-shadow">&nbsp;</span></span></a>
-	</div> 
-	<div data-role="content">		
-	<section>
-		<article>
-			<p>Promociones México se inicia en el 2002 en la ciudad de Aurora, donde se toma la iniciativa y la idea de dar un servicio a la comunidad que está por celebrar: una boda, XV años, bautizo, primeras comuniones, cumpleaños, aniversarios y cualquier otro evento social.</p>
-			<p>Promociones México, ofrece un atractivo directorio de empresas que ofrecen Salones de banquetes, Grupos Musicales, Mariachis, Limusinas, Fotógrafos, Payasos para los Niños, Pastelerías, Renta de Brincolines (Jumpers), Sillas y Lonas, sin faltar los servicios de DJ's. </p>
-		</article>
-	</section>
+	</header> 
+	<div data-role="content">	
+		<figure class="ajuste">
+			<h1 id="logo"><img src="../img/logo.png" /></h1>
+		</figure>
+		<section class="descripcion">
+			<article>
+				<p>Promociones México se inicia en el 2002 en la ciudad de Aurora, donde se toma la iniciativa y la idea de dar un servicio a la comunidad que está por celebrar: una boda, XV años, bautizo, primeras comuniones, cumpleaños, aniversarios y cualquier otro evento social.</p>
+				<p>Promociones México, ofrece un atractivo directorio de empresas que ofrecen Salones de banquetes, Grupos Musicales, Mariachis, Limusinas, Fotógrafos, Payasos para los Niños, Pastelerías, Renta de Brincolines (Jumpers), Sillas y Lonas, sin faltar los servicios de DJ's. </p>
+			</article>
+			<figure class="ajuste">
+				<img src="../img/mariachis.jpg" />
+			</figure>
+		</section>
 	</div>
-	<div data-role="footer" class="footer-docs" data-theme="b">
-	</div>
+	<footer data-role="footer" class="footer-docs ui-footer ui-bar-b" data-theme="b" role="contentinfo">
+		<figure class="iconos">
+			<a href="http://www.facebook.com/promomexico"><img src="../img/face.png"></a>
+			<a href="http://www.facebook.com/promomexico"><img src="../img/twitter.png"></a>
+			<a href="http://www.facebook.com/promomexico"><img src="../img/pin.png"></a>
+
+		</figure>
+	</footer>
 
 </body>
 
