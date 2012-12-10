@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Myriad';
+    src: url('myriadpro-boldit.eot');
+    src: url('pincoyablack-webfont.eot?#iefix') format('embedded-opentype'),
+         url('myriadpro-boldit.otf') format('otf'),
+         url('myriadpro-boldit.ttf') format('truetype'),
+         url('myriadpro-boldit.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
