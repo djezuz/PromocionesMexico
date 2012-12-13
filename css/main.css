@@ -8,3 +8,57 @@
     font-weight: normal;
     font-style: normal;
 }
+
+header
+{
+	background-image: url("../img/logobackground.png");
+background-repeat: no-repeat;
+background-size: auto 200px;
+height: 16.5em;
+background-position: 600px 32px;
+box-shadow: gray 1px 1px 1px;
+width: 1280px;
+}
+
+img.logo
+{
+	padding: 30px 0 0 130px;
+}
+
+header div.bloquederecho
+{
+	display: inline-block;
+margin: 25px 0 0 445px;
+vertical-align: top;
+}
+
+header div.bloquederecho a
+{
+	text-decoration: none;
+}
+
+header div.bloquederecho a img.facebook
+{
+	margin: 0 0 0 155px;
+}
+
+nav ul
+{
+	width: 1060px;
+	margin: 35px 137px 0;
+	height: 4em;
+}
+
+nav ul li
+{
+	line-height: 20px;
+	display: inline;
+	padding: 0 13px;
+}
+
+nav ul li img{
+	width: 25px;
+	margin-right: 10px;
+	margin-top: -5px;
+}
+
