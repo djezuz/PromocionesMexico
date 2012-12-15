@@ -23,6 +23,15 @@ width: 1280px;
 img.logo
 {
 	padding: 30px 0 0 130px;
+	transition: opacity 1s;
+	-moz-transition: opacity 1s; /* Firefox 4 */
+	-webkit-transition: opacity 1s; /* Safari and Chrome */
+	-o-transition: opacity 1s; /* Opera */
+}
+
+img.logo:hover
+{
+	opacity: .5;
 }
 
 header div.bloquederecho
@@ -37,23 +46,44 @@ header div.bloquederecho a
 	text-decoration: none;
 }
 
+header div a img:hover
+{
+	opacity: .4;
+}
+
 header div.bloquederecho a img.facebook
 {
-	margin: 0 0 0 155px;
+	margin: 0 0 0 125px;
 }
 
 nav ul
 {
-	width: 1060px;
+	width: 1000px;
 	margin: 35px 137px 0;
-	height: 4em;
+	height: 3.7em;
+	border-bottom: 1px double #E81B40;
+
 }
 
 nav ul li
 {
 	line-height: 20px;
 	display: inline;
-	padding: 0 13px;
+	padding: 0 11px;
+}
+
+nav ul li a
+{
+	text-decoration: none;
+	color: #58585B;
+	font-style: italic;
+	font-weight: bold;
+}
+
+nav ul li a:hover
+{
+	text-decoration: none;
+	color: #E81B40;
 }
 
 nav ul li img{
@@ -62,3 +92,230 @@ nav ul li img{
 	margin-top: -5px;
 }
 
+
+
+section.presentacion
+{
+	display: inline-block;
+	margin-left: 148px;
+	margin-top: 15px;
+	width: 1070px;
+}
+
+section.presentacion figure
+{
+	display: inline-block;
+}
+
+section.presentacion article
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 423px;
+	margin-top: 9px;
+	text-align: justify;
+}
+
+section.servicios
+{
+	margin: 35px 85px 0;
+}
+
+section.servicios ul
+{
+	width: 1025px;
+	margin: 0 0 10px 48px;
+}
+
+section.servicios li
+{
+	display: inline;
+}
+
+section.servicios li:hover
+{
+	opacity: .5;
+}
+
+section.servicios li a img
+{
+	width: 178px;
+	padding: 0 10px 0;
+}
+
+
+section.slider
+{
+	margin: 30px 150px;
+}
+
+section.slider img
+{
+	border-radius: 30px;
+}
+
+figure img.radius
+{
+	border-radius: 30px;
+}
+
+
+/* Contacto */
+
+.lb-album 
+{
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+}
+
+.lb-album li
+{
+	width:125px;
+	display:inline-block;
+}
+
+.lb-album li > a,
+.lb-album li > a img
+{
+	display: block;
+	float:left;
+}
+
+.lb-album li > a
+{
+	width: 126px;
+	height: 126px;
+	position: relative;
+	padding: 0px;
+	background: #f1d2c2;
+	-webkit-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
+	-moz-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
+	box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px 4px 4px 4px;
+}
+
+.lb-album li > a span
+{
+	position: absolute;
+	width: 126px;
+	height: 126px;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+	line-height: 150px;
+	color: rgba(27,54,81,0.8);
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
+	font-size: 24px;
+	opacity: 0;
+	filter: alpha(opacity=0); /* internet explorer */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
+	-webkit-transition: opacity 0.3s linear;
+	-moz-transition: opacity 0.3s linear;
+	-o-transition: opacity 0.3s linear;
+	-ms-transition: opacity 0.3s linear;
+	transition: opacity 0.3s linear;
+}
+
+
+
+.lb-album li > a:hover span
+{
+	opacity: 1;
+	filter: alpha(opacity=99); /* internet explorer */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
+}
+
+.lb-album li a img:hover
+{
+	opacity: .7;
+}
+
+.lb-overlay
+{
+	width: 0px;
+	height: 0px;
+	position: fixed;
+	overflow: hidden;
+	left: 0px;
+	top: 0px;
+	padding: 0px;
+	z-index: 99;
+	text-align: center;
+	background: rgb(241,210,194);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%, rgba(241,210,194,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.56)), color-stop(100%,rgba(241,210,194,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+	background: radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+}
+
+.lb-overlay > div
+{
+	position: relative;
+	color: rgba(27,54,81,0.8);
+	width: 753px ;
+	height: 422px ;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#D572AE), to(#9C2890), color-stop(.4,#C61B8D));
+	background: -moz-linear-gradient(100% 0% 180deg,#9C2890,#C61B8D,#D572AE 100%);
+	background: -o-linear-gradient(top, #D572AE,#C61B8D,#9C2890);
+	background: -ms-linear-gradient(top, #D572AE,#C61B8D,#9C2890);
+
+	background: url("../img/cuadrorojo.png");
+
+	margin: 0px auto 0px auto;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
+
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+
+	max-height: 100%;
+	position: relative;
+	opacity: 0;
+	filter: alpha(opacity=0); /* internet explorer */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
+	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+	box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+	-webkit-transition: opacity .5s linear;
+	-moz-transition: opacity 0.5s linear;
+	-o-transition: opacity 0.5s linear;
+	-ms-transition: opacity 0.5s linear;
+	transition: opacity 0.5s linear;
+
+
+}
+
+
+.lb-overlay img
+{
+	/* height: 100%; For Opera max-height does not seem to work */
+	max-height: 100%;
+	position: relative;
+
+	-webkit-transition: opacity 0.5s linear;
+	-moz-transition: opacity 0.5s linear;
+	-o-transition: opacity 0.5s linear;
+	-ms-transition: opacity 0.5s linear;
+	transition: opacity 0.5s linear;
+}
+
+.lb-overlay:target 
+{
+	width: auto;
+	height: 50em;
+	bottom: 0px;
+	right: 0px;
+	padding: 50px 100px 50px 100px;
+}
+
+.lb-overlay:target img,
+.lb-overlay:target div,
+.lb-overlay:target a.lb-close
+{
+	opacity: 1;
+	filter: alpha(opacity=99); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
+}

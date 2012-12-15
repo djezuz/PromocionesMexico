@@ -118,3 +118,29 @@ footer figure.iconos img
 	width: 12%;
 	padding: 3% 12% 2% 0;
 }
+
+section.descripcion img
+{
+	border-radius: 30px;
+}
+
+.content-primary p
+{
+	margin: 15px 15px;
+}
+
+.ui-li-thumb, .ui-listview .ui-li-icon
+{
+	position: absolute;
+	left: 1px;
+	top: 0;
+	max-height: 150px;
+	max-width: 150px;
+}
+
+.ui-li-static.ui-li-has-thumb
+{
+	min-height: 60px;
+	padding-left: 190px;
+}
+
