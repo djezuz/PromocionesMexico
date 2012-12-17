@@ -89,6 +89,7 @@
 figure.ajuste img
 {
 	width: 100%;
+	margin-bottom: -4px;
 }
 
 body
@@ -124,7 +125,21 @@ section.descripcion img
 	border-radius: 30px;
 }
 
-.content-primary p
+h2
+{
+	font-size: 23px;
+	color: #3E6790;
+	text-align: center;
+	font-weight: bold;
+	text-shadow: white 2px 1px 5px;
+}
+
+figure.ajuste img
+{
+
+}
+
+.content-primary p, .content-primary h2
 {
 	margin: 15px 15px;
 }
