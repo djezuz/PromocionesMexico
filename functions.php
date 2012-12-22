@@ -20,7 +20,6 @@ add_action('login_head', 'personalizar_login');
   unset( $palabras, $num );
   return trim( $str );
 } ?>
-
 <?php
 add_action('wp_dashboard_setup', 'wpc_dashboard_widgets');
 function wpc_dashboard_widgets() {
@@ -41,7 +40,6 @@ function wpc_dashboard_widgets() {
 ?>
 <?php
 function my_new_contactmethods( $contactmethods ) {
-  
 //add Descripcion
   $contactmethods['descripcion'] = 'Descripcion';
   // Add Twitter
