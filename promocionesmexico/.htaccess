@@ -1,0 +1,19 @@
+RewriteEngine on
+
+RewriteEngine off
+<IfModule mod_suphp.c>
+	suPHP_ConfigPath /home/miguelni/public_html/php.ini
+	<Files php.ini>
+		order allow,deny
+		deny from all
+	</Files>
+</IfModule>
+
+# BEGIN WordPress
+
+# END WordPress
+RewriteCond %{HTTP_HOST} ^conexionew\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.conexionew\.com$
+RewriteRule ^/?$ "http\:\/\/www\.conexionew\.com\/index\.html" [R=301,L]
+
+ErrorDocument 404 /index.html
