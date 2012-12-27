@@ -39,24 +39,86 @@ function wpc_dashboard_widgets() {
 }
 ?>
 <?php
-function my_new_contactmethods( $contactmethods ) {
-//add Descripcion
-  $contactmethods['descripcion'] = 'Descripcion';
-  // Add Twitter
-  $contactmethods['twitter'] = 'Twitter';
-  //add Facebook
-  $contactmethods['facebook'] = 'Facebook';
-  //add Pinterest
-  $contactmethods['pinterest'] = 'Pinterest';
-  //add LinkedIN
-  $contactmethods['linkedin'] = 'Linkedin';
-  //add Behance
-  $contactmethods['behance'] = 'Behance';
-  //add Github
-  $contactmethods['github'] = 'Github';
-  return $contactmethods;
-   // Remove Yahoo IM
-  unset($contactmethods['yim']);
+add_action( 'admin_init', 'rw_register_meta_boxes' );
+function rw_register_meta_boxes()
+{
+    $prefix = 'rw_';
+    $meta_boxes = array();
+    // Here is the code to define a meta box
+    $meta_boxes[] = array(
+        'title'    => 'Directorio de Empresas',
+        'pages'    => array( 'post', 'page' ),
+        'fields' => array(
+            array(
+            // Field name - Will be used as label
+            'name'  => 'Promociones de la empresa',
+            // Field ID, i.e. the meta key
+            'id'   => $prefix . 'promociones',
+            // Field description (optional)
+            'desc'  => 'Si necesitas agregar más promociones, da click al signo más a la derecha',
+            'type'  => 'text',
+            // Default value (optional)
+            'std'   => '¡Próximamente más promociones!',
+            // CLONES: Add to make the field cloneable (i.e. have multiple value)
+            'clone' => true,
+            ),
+            array(
+                'name' => 'Dirección Web',
+                'id'   => $prefix . 'direccionweb',
+                'std'   => 'http://www',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'Teléfono',
+                'id'   => $prefix . 'telefono',
+                'std'   => 'http://www',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'Facebook',
+                'id'   => $prefix . 'facebookweb',
+                'std'   => 'http://www',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'Twitter',
+                'std'   => 'http://www',
+                'id'   => $prefix . 'twitterweb',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'Dirección o Establecimiento',
+                'id'   => $prefix . 'establecimiento',
+                'std'   => 'http://www',
+                'desc' => '<a target="_blank" href="https://maps.google.com/">Buscar Dirección</a>',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'Mapa Móviles',
+                'std'   => '<iframe',
+                'id'   => $prefix . 'mapamoviles',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'Mapa Web',
+                'id'   => $prefix . 'mapa',
+                'type' => 'text',
+            ),
+        )
+    );
+    foreach ( $meta_boxes as $meta_box )
+    {
+        new RW_Meta_Box( $meta_box );
+    }
 }
-add_filter('user_contactmethods','my_new_contactmethods',10,1);
+?>
+<?php
+function SearchFilter($query) {
+if ($query->is_search) {
+$query->set('post_type', 'post');
+}
+return $query;
+}
+
+add_filter('pre_get_posts','SearchFilter');
 ?>

@@ -14,7 +14,7 @@ overflow:hidden;
 position:relative;
 float:left;
 width: 980px;
-height: 335px;
+height: 360px;
 overflow:hidden;
 z-index:1;
 }
@@ -24,7 +24,7 @@ top:0;
 left:0;
 overflow:hidden;
 width: 990px;
-height: 675px !important;
+height: 720px !important;
 }
 .g-slider .inner-cover{
 display:none;
@@ -396,7 +396,7 @@ background:white;
 font-size:14px;
 overflow:hidden;
 width: 980px !important;
-height: 330px !important;
+height: 390px !important;
 }
 .g-slider .content-bar{
 position:relative;
@@ -459,7 +459,7 @@ position:relative;
 float:left;
 padding:19px 0px 0px 1px;
 width: 978px !important;
-height: 290px !important;
+height: 350px !important;
 }
 .g-slider .outer-content{
 position:relative;

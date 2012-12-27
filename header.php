@@ -8,7 +8,7 @@
   <!-- Basic Page Needs
   ================================================== -->
 
-  <title><?php bloginfo('name'); ?><?php wp_title(); ?></title>  	
+  <title><?php bloginfo('name'); ?></title>  	
   <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
   <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> 
   <meta name="description" content="Promociones México es...">
@@ -125,11 +125,32 @@
     <li>
       <a href="#contacto">
       <img src="<?php bloginfo('template_directory'); ?>/img/contactanos.png" />
-      Contáctanos
+      ¡Suscríbete!
       </a>
         <div class="lb-overlay" id="contacto">
           <a href="#page" class="lb-close">x Cerrar</a>
           <div>
+
+            <div class="mailchimp">
+              <!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="http://promocionesmexico.us6.list-manage.com/subscribe/post?u=e9b966bcb805706b460253d14&amp;id=53e650da67" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  <h2>¡Suscríbete! </h2>
+    <p>¡Lo mejor en promociones para eventos sociales!</p>
+<div class="mc-field-group">
+  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="  Tu Correo Electrónico" />
+</div>
+  <div id="mce-responses" class="clear">
+    <div class="response" id="mce-error-response" style="display:none"></div>
+    <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>  <div class="clear"><input type="submit" value="¡Me quiero suscribir!" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <label for="mce-EMAIL"><span class="asterisk">*Recibirás un correo y debes confirmarlo para suscribirte completamente.</span>
+</label>
+  </form>
+  </div>
+
+<!--End mc_embed_signup-->  
+            </div>
             <div class="parrafocontacto">
             <p>
               ¿Necesitas apoyo para organizar tu evento social?
@@ -142,7 +163,7 @@
             <br />
             
             
-              <p style="font-weight: bold">promocionesmexico@ejemplo.com</p>
+              <p style="font-weight: bold">info@promocionesmexico.net</p>
               <br />
               <br />
               <a href="http://www.facebook.com/promomexico" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/img/face.png" /></a>

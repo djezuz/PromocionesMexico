@@ -47,53 +47,88 @@ $(document).ready(
 
 <div class="container1">
 	<div class="g-slider">       
-    	<div class="tiles">
-        	<ul>
-                  <li class="cuadros">
-                    <a href="#text1" rel="inline"><img src="<?php bloginfo('template_directory'); ?>/img/dianaflower.png" alt=""/></a>
-                    <div>Diana's Flower Design</div>
-                </li>
-          	</ul>
-
-
-<!-- inline 1 example -->
-<div id="text1">
-    <div class="imagenempresa">
-    	<div class="imagen">
-        <img src="<?php bloginfo('template_directory'); ?>/img/dianaflower.png" />    
-    </div>
-    
-    <div class="sitioweb">
-        <a href="http://www.dianasflowersdesign.com" target="_blank"><p>www.dianasflowersdesign.com</p></a>
-    </div>
-    <div class="red">
-        <img src="<?php bloginfo('template_directory'); ?>/img/fb-circ.png" />    
-        <img src="<?php bloginfo('template_directory'); ?>/img/twit-circ.png" />    
-    </div>
-    
-
-    </div>
-    <div class="descripcionempresa">
-
-        <h2>Diana's Flower Design</h2>
-        <p>El diseño y elegancia en un evento social es una prioridad. Los mejores decoradores de flores en Chicago.</p>
-        <br />
-
-        <p><blockquote>50% de Descuendo en ramos hasta el 28 de Diciembre de 2012.</blockquote></p>
-        <p><blockquote>70% de Descuendo en arreglos hasta el 29 de Diciembre de 2012.</blockquote></p>
-        <p><blockquote>90% de Descuendo en arreglos hasta el 29 de Diciembre de 2012.</blockquote></p>
-        <p><blockquote>Un arreglo gratis envíando un tweet a @dianasflowers, antes del 29 de Diciembre de 2012.</blockquote></p>
-
-    </div>
-    <div class="mapa">
-    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.mx/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=1842+s+Blue+Island++Chicago+IL+60608&amp;aq=&amp;sll=19.041349,-98.193054&amp;sspn=0.189854,0.308647&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=1842+S+Blue+Island+Ave,+Chicago,+Cook,+Illinois+60608,+Estados+Unidos&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.mx/maps?f=q&amp;source=embed&amp;hl=es-419&amp;geocode=&amp;q=1842+s+Blue+Island++Chicago+IL+60608&amp;aq=&amp;sll=19.041349,-98.193054&amp;sspn=0.189854,0.308647&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=1842+S+Blue+Island+Ave,+Chicago,+Cook,+Illinois+60608,+Estados+Unidos&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left"></a></small>
-    </div>
-
-    <div class="comments">
-
-    </div>
-
+    		<div class="tiles">
+        			<ul>
+        				<?php $i = 0; ?>
+        				<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+        				<?php 
+				$i++;
+        				$counter = get_the_ID(); 
+        				$hola = "#text";
+        				?>	
+                  			<li class="cuadros">
+                    				<a href="<?php echo $hola . $i ?>" rel="inline"><?php the_post_thumbnail() ?></a>
+					<div><?php the_title(); ?></div>
+                			</li>
+                			<?php endwhile ?>
+				<?php else : ?>
+				<?php endif; ?>
+          			</ul>
+		</div>
+	</div>
 </div>
+
+<?php $i = 0; ?>
+<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+<?php 
+$i++;
+$counter = get_the_ID(); 
+$hola = "text";
+?>
+<div id="<?php echo $hola . $i ?>">
+	<div class="imagenempresa">
+		<div class="imagen">
+			<?php the_post_thumbnail() ?>
+			<?php echo $i ?>
+			<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style" addthis:url="<?php the_permalink(); ?>"
+                    addthis:title="<?php the_title(); ?>"
+                    addthis:description:"the_excerpt();">
+                    <br />
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<br />
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50d926e16f47b2bf"></script>
+<!-- AddThis Button END -->
+		</div>
+    		<div class="sitioweb">
+        			<a target="_blank" href="<?php echo rwmb_meta( 'rw_direccionweb' ); ?>" target="_blank"><p><?php echo rwmb_meta( 'rw_direccionweb' ); ?></p></a>
+    		</div>
+    		<div class="red">
+        			<a target="_blank" href="<?php echo rwmb_meta( 'rw_facebookweb' ); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/fb-circ.png" /></a>
+        			<a target="_blank" href="<?php echo rwmb_meta( 'rw_twitterweb' ); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/twit-circ.png" /></a>
+    		</div>    
+	</div>
+    	<div class="descripcionempresa">
+		<h2><?php the_title(); ?></h2>
+		<div class="basicos">
+			<img src="<?php bloginfo('template_directory'); ?>/img/casita.jpg" /><p><?php echo rwmb_meta( 'rw_establecimiento' ); ?></p>
+			</br>
+			<img src="<?php bloginfo('template_directory'); ?>/img/telefonito.jpg" /><p><?php echo rwmb_meta( 'rw_telefono' ); ?></p>
+		</div>
+
+		<p><?php the_content(); ?></p>
+        		<br />
+        		<?php 
+        		$promociones = rwmb_meta('rw_promociones', 'type=text');
+        		foreach ( $promociones as $promocion )
+{
+    echo '<p><blockquote>' . $promocion . '</blockquote></p>';
+}
+        		?>
+	</div>
+    	<div class="mapa">
+    			<?php echo rwmb_meta( 'rw_mapa' ); ?>
+    		</div>
+    	<div class="comments">
+	</div>
+</div>
+<?php endwhile ?>
+<?php else : ?>
+<?php endif; ?>
+
 
 <!-- JS
     ================================================== -->

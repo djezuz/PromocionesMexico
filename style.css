@@ -154,7 +154,7 @@ section.servicios li a img
 
 section.slider
 {
-	margin: 30px 185px;
+	margin: 55px 185px 0;
 }
 
 
@@ -162,6 +162,7 @@ figure img.radius
 {
 	border-radius: 30px;
 }
+
 
 
 /* Contacto */
@@ -260,7 +261,7 @@ figure img.radius
 	
 	color: rgba(27,54,81,0.8);
 	width: 790px ;
-	height: 400px ;
+	height: 500px ;
 	background: url("img/cuadrorojo.png");
 
 	margin: 0px auto 0px auto;
@@ -373,6 +374,7 @@ margin-right: 0 !important;
 .inner-content .imagenempresa .imagen img
 {
 	width: 240px !important;
+	margin-bottom: 20px;
 }
 
 .inner-content .mapa
@@ -413,15 +415,12 @@ margin-right: 0 !important;
 
 div.parrafocontacto
 {
-	padding-top: 57px;
+	padding-top: 25px;
 	width: 540px;
 	padding-left: 139px;
-}
-
-div.parrafocontacto
-{
 	color: white;
 }
+
 
 input
 {
@@ -434,4 +433,47 @@ input
 blockquote p
 {
 	font-size: 14px;
+}
+
+.mailchimp
+{
+	margin-top: 10px;
+	padding-top: 10px;
+	color: white;
+}
+
+.mailchimp .mc-field-group
+{
+	display: inline-block;
+}
+
+.mailchimp  .clear
+{
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 1px;
+	margin-left: 11px;
+}
+
+.mailchimp  .asterisk
+{
+	font-size: 10px;
+}
+
+.basicos
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.basicos img
+{
+	width: 33px !important;
+	margin-top: -6px;
+	margin-right: 18px;
+	margin-bottom: -1px;
+}
+.basicos p
+{
+	display: inline-block;
 }
