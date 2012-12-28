@@ -1,6 +1,6 @@
 <script type="text/javascript">
 <!--
-if (screen.width <= 600) {
+if (window.width <=1200) {
 window.location = "<?php echo site_url() ?>/mobile";
 }
 //-->
